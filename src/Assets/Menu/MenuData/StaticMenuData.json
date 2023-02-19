@@ -1,0 +1,51 @@
+[
+    {
+        "id":"1",
+        "name": "Hyderabadi Chicken Dum Biryani",
+        "price": "₹300",
+        "img": "https://c.ndtvimg.com/2022-04/fq5cs53_biryani-doubletree-by-hilton_625x300_12_April_22.jpg"
+    },
+    {
+        "id":"2",
+        "name": "Chicken Shawarma",
+        "price": "₹150",
+        "img": "http://www.yummyfoodrecipes.in/resources/picture/org/chicken-shawarma.jpg"
+    },
+    {
+        "id":"3",
+        "name": "Chicken Pizza",
+        "price": "₹200",
+        "img": "https://www.dominos.co.in/files/items/chi_max.jpg"
+    },
+    {
+        "id":"4",
+        "name": "Indi Chicken Tikka Pizza",
+        "price": "₹250",
+        "img": "https://www.kolkatagiftsonline.com/pic/GG06245.jpg"
+    },
+    {
+        "id":"5",
+        "name": "Chicken Sausage Pizza",
+        "price": "₹300",
+        "img": "https://www.dominos.co.in/files/items/MicrosoftTeams-image_(20).png"
+    },
+    {
+        "id":"6",
+        "name": "Fried Chicken - 4 Pcs",
+        "price": "₹300",
+        "img": "https://insanelygoodrecipes.com/wp-content/uploads/2020/04/Fried_Chicken-1024x536.png"
+    },
+    {
+        "id":"7",
+        "name": "Fried Chicken Burger",
+        "price": "₹230",
+        "img": "https://recipe30.com/wp-content/uploads/2021/03/Chicken-burger-Italian-twist.jpg"
+    },
+    {
+        "id":"8",
+        "name": "Lamb Burgers With Yogurt Sauce and Arugula",
+        "price": "₹450",
+        "img": "https://assets.bonappetit.com/photos/60df168035cd8acaa96c460d/1:1/w_2560%2Cc_limit/Basically-Lamb-Burger.jpg"
+    }
+
+]

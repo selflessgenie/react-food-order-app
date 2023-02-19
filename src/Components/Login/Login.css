@@ -1,0 +1,10 @@
+.name-input {
+    height: 50px;
+    padding: 20px;
+    border-radius: 3px;
+    border-width: 1px;
+}
+
+*:focus {
+    outline: none;
+}

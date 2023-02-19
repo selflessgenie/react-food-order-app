@@ -1,0 +1,43 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 50px;
+  background-color: #fa261c;
+  color: white;
+}
+
+.logo-restaurant-name-container {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.restaurant-logo {
+  width: 100px;
+  height: 80px;
+  padding-right: 10px;
+}
+
+.profile-name {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.profile-name:hover .dropdown-content {
+  display: block;
+  color: black;
+  background-color: white;
+}

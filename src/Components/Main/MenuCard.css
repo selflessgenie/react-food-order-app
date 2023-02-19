@@ -1,0 +1,45 @@
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    width: 600px; 
+}
+
+.food-description-price-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.food-img-counter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.food-img {
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.counter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -15px;
+    border-style: solid;
+    border-radius: 7px;
+    width: 150px;
+    background-color: #FA261C;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
