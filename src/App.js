@@ -4,11 +4,10 @@ import Menu from "./Components/Main/Menu";
 import Header from "./Components/Header/Header";
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [userName, setUserName] = useState("");
 
   const loginHandler = (flag) => {
-    console.log("triggered loginHandler " + flag);
     setIsLoggedIn(flag);
   };
 

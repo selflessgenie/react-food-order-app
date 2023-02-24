@@ -9,9 +9,8 @@ const Menu = () => {
   const [numberOfItems, setNumberOfItems] = useState(0);
   const [price, setPrice] = useState(0);
 
-  const cartDetailsHandler = (count, id, price) => {
+  const cartDetailsHandler = (count, id, price, name) => {
     
-    console.log(count, id, price)   
     if(cart != null){
       let nextCart = [...cart];
       let orderIndex = nextCart.findIndex(order => order.id == id);
@@ -22,7 +21,7 @@ const Menu = () => {
         nextCart.splice(orderIndex, 1);
       }
       else{
-        order = {id: id, count: count, price: price};
+        order = {id: id, count: count, price: price, name: name};
       }
       if(count > 0)
         nextCart.push(order);
@@ -30,23 +29,30 @@ const Menu = () => {
     } else {
       if(count == 0)
         return;
-      const temp = [{id: id, count: count, price: price}];
+      const temp = [{id: id, count: count, price: price, name: name}];
       setCart(temp);
     }
   }
 
   useEffect(() => {
-    console.log(cart);
+    if(cart != null) {
+      setCart(cart.sort((item1, item2)=>{
+        if(item1.id < item2.id)
+          return -1
+      }))
+    }
+
     let numberOfItems = 0;
     let price = 0;
     if(cart != null) {
-    cart.forEach(element => {
-      numberOfItems += element.count;
-      price += element.count * (element.price);
-    });
-    setNumberOfItems(numberOfItems);
-    setPrice(price);
-  }
+      cart.forEach(element => {
+        numberOfItems += element.count;
+        price += element.count * (element.price);
+      });
+      setNumberOfItems(numberOfItems);
+      setPrice(price);
+    } 
+    console.log(cart)
   }, [cart])
   
 
@@ -61,10 +67,16 @@ const Menu = () => {
             price={menu.price}
             imageURL={menu.img}
             cartDetailsHandler = {cartDetailsHandler}
+            cart = {cart}
           />
         ))}
         {cart && cart.length > 0 ?
-          <CartTab numberOfItems = {numberOfItems} price = {price}/> : <></>
+          <CartTab 
+            numberOfItems = {numberOfItems} 
+            price = {price} 
+            cartDetails = {cart}
+            cartDetailsHandler = {cartDetailsHandler}
+          /> : <></>
         }
     </div>
   );

@@ -1,0 +1,34 @@
+.name-price-item-counter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.name-price-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.place-order-container {
+    display: flex;
+    background-color: #fa261c;
+    border-color: transparent;
+    width: 700px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+
+}
+.place-order-container:hover {
+    background-color: #fa261c;
+    border-color: transparent;
+}
+
+.total-container {
+    display: flex;
+    flex-direction: column;
+}
