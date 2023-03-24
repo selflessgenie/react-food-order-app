@@ -9,6 +9,14 @@ const Menu = () => {
   const [numberOfItems, setNumberOfItems] = useState(0);
   const [price, setPrice] = useState(0);
 
+  const getCountById = (id) => {
+    if (cart == null) return 0;
+    var count = cart.filter((item) => {
+      if (item.id === id) return item.count;
+    })[0]
+    return count != null ? count.count != undefined ? count.count : 0 : 0;
+  };
+
   const cartDetailsHandler = (count, id, price, name) => {
     
     if(cart != null){
@@ -68,6 +76,7 @@ const Menu = () => {
             imageURL={menu.img}
             cartDetailsHandler = {cartDetailsHandler}
             cart = {cart}
+            count = {getCountById(menu.id)}
           />
         ))}
         {cart && cart.length > 0 ?

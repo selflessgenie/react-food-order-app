@@ -18,6 +18,11 @@ const ItemCounter = (props) => {
     props.cartDetailsHandler(counterValue, props.id, props.price.substring(1), props.name)
   }, [counterValue])
 
+  useEffect(() => {
+    if(counterValue != props.defaultCount)
+      setCounterValue(props.defaultCount)
+  }, [props.defaultCount])
+
   return (
     <div className='counter'>
         <button 
