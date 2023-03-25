@@ -3,9 +3,11 @@ import MenuCard from "./MenuCard";
 import "./Menu.css";
 import StaticMenuData from "../../Assets/Menu/MenuData/StaticMenuData";
 import CartTab from './CartTab';
+import OrdersModal from "./OrdersModal";
 
-const Menu = () => {
+const Menu = (props) => {
   const [cart, setCart] = useState(null);
+  const [orders, setOrders] = useState(null);
   const [numberOfItems, setNumberOfItems] = useState(0);
   const [price, setPrice] = useState(0);
 
@@ -16,6 +18,41 @@ const Menu = () => {
     })[0]
     return count != null ? count.count != undefined ? count.count : 0 : 0;
   };
+
+  const ordersDetailsHandler = () => {
+    if(orders == null) {
+      setOrders(cart);
+    } else {
+     let newOrders = [...orders]; 
+     cart.forEach((c) => {
+      let flag = false;
+      let newOrder = null;
+      orders.forEach((order) => {
+        if(c.id == order.id) {
+          order.count = order.count + c.count;
+          flag = true;
+          newOrder = order;
+        }
+      })
+      if(flag == false) {
+        newOrders.push(c);
+      }
+     })
+     setOrders(newOrders); 
+    }
+    setCart(null);
+  }
+
+  useEffect(() => {
+    console.log("orders - ", orders)
+    let count = 0;
+    if(orders != null && orders != undefined) {
+      orders.forEach((order)=>{
+        count = count + order.count;
+      })
+    }
+    props.setCartCount(count)
+  }, [orders])
 
   const cartDetailsHandler = (count, id, price, name) => {
     
@@ -66,6 +103,14 @@ const Menu = () => {
 
   return (
     <div className="menu-container">
+      {props.showOrdersPage ? 
+        <OrdersModal 
+          modalVisible={props.showOrdersPage}
+          toggleShowOrdersPage = {props.toggleShowOrdersPage}
+          orders = {orders}
+        /> : <></>
+      }
+
       {StaticMenuData &&
         StaticMenuData.map((menu) => (
           <MenuCard
@@ -85,6 +130,7 @@ const Menu = () => {
             price = {price} 
             cartDetails = {cart}
             cartDetailsHandler = {cartDetailsHandler}
+            ordersDetailsHandler = {ordersDetailsHandler}
           /> : <></>
         }
     </div>

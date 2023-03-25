@@ -41,3 +41,29 @@
   color: black;
   background-color: white;
 }
+
+.cart-icon {
+  display: flex;
+  justify-content: center;
+}
+
+ .cart-item-count {
+  margin-left: -28px;
+  color: white;
+  font-weight: bolder;
+  border-radius: 100px;
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+}
+
+.cart-icon-content {
+  height: 45px;
+}
+
+.cart-profile-name-container {
+  display: flex;
+  width: 150px;
+  align-items: center;
+  justify-content: space-between;
+}

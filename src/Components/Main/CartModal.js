@@ -49,7 +49,7 @@ const CartModal = (props) => {
         
       </CModalBody>
       <CModalFooter>
-        <CButton color="primary" className='place-order-container'>
+        <CButton color="primary" className='place-order-container' onClick={props.ordersDetailsHandler}>
             <div className='total-container'>
                 <label className=''>₹{totalPrice}</label>
                 <label>Total</label>

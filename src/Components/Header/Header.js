@@ -1,7 +1,8 @@
 import React from "react";
 import "./Header.css";
+import cartIcon from "../../Assets/Header/cart.png";
 
-const Header = (props) => {
+const Header = (props) => {  
   return (
     <div className="header-container">
       <div className="logo-restaurant-name-container">
@@ -12,11 +13,21 @@ const Header = (props) => {
         <p>Hunger's Hub</p>
       </div>
       {props.isLoggedIn ? (
-        <div class="profile-name">
-          <span>{props.userName}</span>
-          <div class="dropdown-content">
-            <button>Logout</button>
+        <div className="cart-profile-name-container">
+          <div className="cart-icon" onClick={props.toggleShowOrdersPage}>
+            <img className="cart-icon-content"
+              src={cartIcon}
+            />
+            <span className="cart-item-count">{props.cartCount}</span>
           </div>
+          <div className="profile-name">
+            {/* <span>{props.userName}</span> */}
+            <span>Rajan</span>
+            <div className="dropdown-content">
+              <button onClick={() => window.location.reload(false)}>Logout</button>
+            </div>
+          </div>
+        <div/>
         </div>
       ) : (
         <></>

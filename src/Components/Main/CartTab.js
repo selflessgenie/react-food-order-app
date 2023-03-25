@@ -21,6 +21,7 @@ const CartTab = (props) => {
           setModalVisible={setModalVisible} 
           cartDetails = {props.cartDetails}
           cartDetailsHandler = {props.cartDetailsHandler}
+          ordersDetailsHandler = {props.ordersDetailsHandler}
       />
     </>
   )
