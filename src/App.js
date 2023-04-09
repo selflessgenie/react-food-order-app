@@ -4,7 +4,7 @@ import Menu from "./Components/Main/Menu";
 import Header from "./Components/Header/Header";
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userName, setUserName] = useState("");
   const [showOrdersPage, setShowOrdersPage] = useState(false);
   const [cartCount, setCartCount] = useState(0);

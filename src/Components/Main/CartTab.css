@@ -4,7 +4,7 @@
     font-weight: bold;
     position: fixed;
     bottom: 0;
-    width: 800px;
+    width: 100%;
     display: flex;
     border-radius: 5px;
     margin-bottom: 10px;

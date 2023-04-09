@@ -3,10 +3,10 @@
     justify-content: space-between;
     background-color: white;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 0 10px 0;
     border-radius: 20px;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-    width: 600px; 
+    width: 100%; 
 }
 
 .food-description-price-container {
@@ -15,6 +15,7 @@
     justify-content: space-evenly;
     font-weight: bold;
     margin-left: 20px;
+    width: 30%;
 }
 
 .food-img-counter-container {

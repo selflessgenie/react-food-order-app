@@ -3,21 +3,24 @@
   align-items: center;
   justify-content: space-between;
   height: 80px;
-  padding: 50px;
+  padding: 50px 5px 50px 5px;
   background-color: #fa261c;
   color: white;
+  min-width: 100%;
 }
 
 .logo-restaurant-name-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 3.5vw;
+  min-width: 50%;
 }
 
 .restaurant-logo {
-  width: 100px;
-  height: 80px;
+  width: 30%;
+  height: 10%;
   padding-right: 10px;
 }
 
@@ -25,14 +28,15 @@
   position: relative;
   display: inline-block;
   font-weight: bold;
+  inline-size: 70%;
+  overflow-wrap: break-word;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 12px 16px;
+  padding: 0.1vw;
   z-index: 1;
 }
 

@@ -21,8 +21,7 @@ const Header = (props) => {
             <span className="cart-item-count">{props.cartCount}</span>
           </div>
           <div className="profile-name">
-            {/* <span>{props.userName}</span> */}
-            <span>Rajan</span>
+            <span>{props.userName}</span>
             <div className="dropdown-content">
               <button onClick={() => window.location.reload(false)}>Logout</button>
             </div>
